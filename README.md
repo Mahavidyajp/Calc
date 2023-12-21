@@ -37,7 +37,7 @@ calculator.html
             }
             .box{
                 width: 400px;
-                height: 500px;
+                height: 520px;
                 background-color:plum;
                 border-radius: 15px;
                 border-color: black;
@@ -58,18 +58,18 @@ calculator.html
             }
             table{
                 text-align: center;
-                margin:20px;
+                margin:5px;
             }
             .button{
-                width: 60px;
-                height:60px;
+                width: 55px;
+                height:55px;
                 background-color:transparent;
                 border-radius: 5px;
                 box-shadow: 5px 5px 2px purple;
                 font-size: larger;
             }
             h1{
-                margin-top: 50px;
+                margin-top: 10px;
                 color:darkblue;
                 font-size: 50px;
             }
@@ -79,7 +79,7 @@ calculator.html
                 bottom: 0;
                 width: 100%;
                 height:21px;
-                margin-top: 50px;
+                margin-top: 36px;
                 
                 
             }
@@ -112,11 +112,16 @@ calculator.html
                         <td><input type="button" value="*" class="button" onclick="f.m.value+='*'"></td>
                     </tr>
                     <tr>
-                        <td><input type="button" value="AC" class="button" onclick="f.m.value=''"></td>
+                        <td><input type="button" value="%" class="button" onclick="f.m.value+='%'"></td>
                         <td><input type="button" value="0" class="button" onclick="f.m.value+='0'"></td>
-                        <td><input type="button" value="=" class="button" onclick="f.m.value=eval(f.m.value)"></td>
+                        <td><input type="button" value="." class="button" onclick="f.m.value+='.'"></td>
                         <td><input type="button" value="/" class="button" onclick="f.m.value+='/'"></td>
                     </tr>
+                    <tr>
+                        <td><input type="button" value="AC" class="button" onclick="f.m.value=''"></td>
+                        <td><input type="button" value="00" class="button" onclick="f.m.value+='00'"></td>
+                        <td><input type="button" value="=" class="button" onclick="f.m.value=eval(f.m.value)"></td>
+                        <td><input type="button" value="^" class="button" onclick="f.m.value+='^'"></td>
                 </table>
             </form>
         </div>
@@ -132,8 +137,8 @@ calculator.html
 
 ## OUTPUT:
 
-![Alt text](c1.png)
-![Alt text](c2.png)
+![Alt text](cal(1).png)
+![Alt text](cal(2).png)
 
 ## RESULT:
 The program for designing a standard calculator using HTML and CSS is executed successfully.
