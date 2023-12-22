@@ -1,5 +1,5 @@
 # Ex.08 Design of a Standard Calculator
-## Date:21.12.23
+## Date:22.12.23
 
 ## AIM:
 To design a web application for a standard calculator with minimum five operations.
@@ -30,115 +30,144 @@ calculator.html
 
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="calculator.css">
         <title>Calculator</title>
-        <style>
-            *{
-                font-family:cursive;
-            }
-            .box{
-                width: 400px;
-                height: 520px;
-                background-color:plum;
-                border-radius: 15px;
-                border-color: black;
-                border-style:double;
-                box-shadow:5px 5px 2px grey;
-                
-            }
-            .mainbox{
-                margin-top: 40px;
-                width: 350px;
-                height:60px;
-                border-radius: 5px;
-                background-color:white;
-                color:darkblue;
-                font-size: 40px;
-                border-style:ridge;
-                border-width: 5px;
-            }
-            table{
-                text-align: center;
-                margin:5px;
-            }
-            .button{
-                width: 55px;
-                height:55px;
-                background-color:transparent;
-                border-radius: 5px;
-                box-shadow: 5px 5px 2px purple;
-                font-size: larger;
-            }
-            h1{
-                margin-top: 10px;
-                color:darkblue;
-                font-size: 50px;
-            }
-            footer{
-                background-color: darkblue;
-                color: yellow;
-                bottom: 0;
-                width: 100%;
-                height:21px;
-                margin-top: 36px;
-                
-                
-            }
-            
-        </style>
     </head>
     <body style="background-color:mediumpurple;">
         <center>
         <h1>CALCULATOR</h1>
         <div class="box">
-            <form name="f">
-                <input class="mainbox" id="mb" name="m">
+            <input class="screen" id="screen">
                 <table cellspacing="20">
                     <tr>
-                        <td><input type="button" value="1" class="button" onclick="f.m.value+='1'"></td>
-                        <td><input type="button" value="2" class="button" onclick="f.m.value+='2'"></td>
-                        <td><input type="button" value="3" class="button" onclick="f.m.value+='3'""></td>
-                        <td><input type="button" value="+" class="button" onclick="f.m.value+='+'"></td>
+                        <td><button class="color">(</button></td>
+                        <td><button class="color">)</button></td>
+                        <td><button class="color"> C </button></td>
+                        <td><button class="color">%</button></td>
                     </tr>
                     <tr>
-                        <td><input type="button" value="4" class="button" onclick="f.m.value+='4'"></td>
-                        <td><input type="button" value="5" class="button" onclick="f.m.value+='5'"></td>
-                        <td><input type="button" value="6" class="button" onclick="f.m.value+='6'"></td>
-                        <td><input type="button" value="-" class="button" onclick="f.m.value+='-'"></td>
+                        <td><button> 7 </button></td>
+                        <td><button> 8 </button></td>
+                        <td><button> 9 </button></td>
+                        <td><button class="color"> * </button></td>
                     </tr>
                     <tr>
-                        <td><input type="button" value="7" class="button" onclick="f.m.value+='7'"></td>
-                        <td><input type="button" value="8" class="button" onclick="f.m.value+='8'"></td>
-                        <td><input type="button" value="9" class="button" onclick="f.m.value+='9'"></td>
-                        <td><input type="button" value="*" class="button" onclick="f.m.value+='*'"></td>
+                        <td><button> 4 </button></td>
+                        <td><button> 5 </button></td>
+                        <td><button> 6 </button></td>
+                        <td><button class="color"> - </button></td>
                     </tr>
                     <tr>
-                        <td><input type="button" value="%" class="button" onclick="f.m.value+='%'"></td>
-                        <td><input type="button" value="0" class="button" onclick="f.m.value+='0'"></td>
-                        <td><input type="button" value="." class="button" onclick="f.m.value+='.'"></td>
-                        <td><input type="button" value="/" class="button" onclick="f.m.value+='/'"></td>
+                        <td><button> 1 </button></td>
+                        <td><button> 2 </button></td>
+                        <td><button> 3 </button></td>
+                        <td><button class="color"> + </button></td>
                     </tr>
                     <tr>
-                        <td><input type="button" value="AC" class="button" onclick="f.m.value=''"></td>
-                        <td><input type="button" value="00" class="button" onclick="f.m.value+='00'"></td>
-                        <td><input type="button" value="=" class="button" onclick="f.m.value=eval(f.m.value)"></td>
-                        <td><input type="button" value="^" class="button" onclick="f.m.value+='^'"></td>
+                        <td><button> 0 </button></td>
+                        <td><button class="color"> . </button></td>
+                        <td><button class="color"> / </button></td>
+                        <td><button class="color"> = </button></td>
                 </table>
             </form>
         </div>
         <footer>
             <p>Designed by Maha Vidya (23013441)</p>
         </footer>
-        </center>
-        
+        </center>        
     </body>
-</html> 
+    <script src="calculator.js"></script>
+</html>  
+
+calculator.css
+
+
+*{
+    font-family:cursive;
+}
+.box{
+    width: 400px;
+    height: 520px;
+    background-color:plum;
+    border-radius: 15px;
+    border-color: black;
+    border-style:double;
+    box-shadow:5px 5px 2px grey;
+}
+.screen{
+    margin-top: 40px;
+    width: 350px;
+    height:60px;
+    border-radius: 5px;
+    background-color:white;
+    color:darkblue;
+    font-size: 40px;
+    border-style:ridge;
+    border-width: 5px;
+}
+table{
+    text-align: center;
+    margin:5px;
+}
+button{
+    width: 55px;
+    height:55px;
+    background-color:transparent;
+    border-radius: 5px;
+    box-shadow: 5px 5px 2px purple;
+    font-size: larger;
+}
+h1{
+    margin-top: 10px;
+    color:darkblue;
+    font-size: 50px;
+}
+footer{
+    background-color: darkblue;
+    color: yellow;
+    bottom: 0;
+    width: 100%;
+    height:21px;
+    margin-top: 36px;
+}
+
+calculator.js
+
+let screen = document.getElementById('screen');
+buttons = document.querySelectorAll('button');
+let screenValue = '';
+for (item of buttons) {
+    item.addEventListener('click', (e) => {
+        buttonText = e.target.innerText;
+        console.log('Button text is ', buttonText);
+        if (buttonText == 'X') {
+            buttonText = '*';
+            screenValue += buttonText;
+            screen.value = screenValue;
+        }
+        else if (buttonText == 'C') {
+            screenValue = "";
+            screen.value = screenValue;
+        }
+        else if (buttonText == '=') {
+            screen.value = eval(screenValue);
+        }
+        else {
+            screenValue += buttonText;
+            screen.value = screenValue;
+        }
+    })
+}
 
 ```
 
 ## OUTPUT:
 
-![Alt text](cal(1).png)
-![Alt text](cal(2).png)
+![Alt text](s1.png)
+![Alt text](s2.png)
 
 ## RESULT:
 The program for designing a standard calculator using HTML and CSS is executed successfully.
