@@ -39,6 +39,7 @@ calculator.html
     <body style="background-color:mediumpurple;">
         <center>
         <h1>CALCULATOR</h1>
+        <p>Maha Vidya (23013441)</p>
         <div class="box">
             <input class="screen" id="screen">
                 <table cellspacing="20">
@@ -74,13 +75,10 @@ calculator.html
                 </table>
             </form>
         </div>
-        <footer>
-            <p>Designed by Maha Vidya (23013441)</p>
-        </footer>
         </center>        
     </body>
     <script src="calculator.js"></script>
-</html>  
+</html> 
 
 calculator.css
 
@@ -111,6 +109,7 @@ calculator.css
 table{
     text-align: center;
     margin:5px;
+
 }
 button{
     width: 55px;
@@ -125,49 +124,17 @@ h1{
     color:darkblue;
     font-size: 50px;
 }
-footer{
-    background-color: darkblue;
-    color: yellow;
-    bottom: 0;
-    width: 100%;
-    height:21px;
-    margin-top: 36px;
-}
-
-calculator.js
-
-let screen = document.getElementById('screen');
-buttons = document.querySelectorAll('button');
-let screenValue = '';
-for (item of buttons) {
-    item.addEventListener('click', (e) => {
-        buttonText = e.target.innerText;
-        console.log('Button text is ', buttonText);
-        if (buttonText == 'X') {
-            buttonText = '*';
-            screenValue += buttonText;
-            screen.value = screenValue;
-        }
-        else if (buttonText == 'C') {
-            screenValue = "";
-            screen.value = screenValue;
-        }
-        else if (buttonText == '=') {
-            screen.value = eval(screenValue);
-        }
-        else {
-            screenValue += buttonText;
-            screen.value = screenValue;
-        }
-    })
+p{
+    margin-top: 10px;
+    color:darkblue;
 }
 
 ```
 
 ## OUTPUT:
 
-![Alt text](s1.png)
-![Alt text](s2.png)
+![Alt text](sc(1).png)
+![Alt text](sc(2).png)
 
 ## RESULT:
 The program for designing a standard calculator using HTML and CSS is executed successfully.
